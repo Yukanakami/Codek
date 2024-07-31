@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#" onclick="showSection('info')">Profile</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('about')">About</a>
+    </div>
+
+    <div class="profile-container" id="profileContainer">
+        <div class="profile-header" id="profileHeader">
+            <img src="image/maheka.jpg" width="150" alt="Profile Picture">
+        </div>
+
+        <div class="profile-info" id="info">
+            <h1>Nyoman Maheka Wijananta Putra</h1>
+            <p>Student</p>
+            <p>Email: nyomanmaheka69@gmail.com</p>
+            <p>Phone: 087763143683</p>
+            <p>Address: Jln Gunung Tangkuban Perahu</p>
+        </div>
+
+        <div class="profile-links" id="contact">
+            <h2>My Sosial Media</h2>
+            <a href="https://github.com/Yukanakami" target="_blank"><img src="image/github.svg" alt="GitHub"></a>
+            <a href="https://x.com/OsigawaS27520?s=08" target="_blank"><img src="image/X.png" alt="X"></a>
+            <a href="https://www.instagram.com/maheka._/" target="_blank"><img src="image/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61562117649997&mibextid=ZbWKwL" target="_blank"><img src="image/facebook.svg" alt="Facebook"></a>
+        </div>
+
+        <div class="profile-projects" id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div id="skills">
+            <h1>My Skills</h1> 
+            <p>HTML</p> 
+            <div class="container"> 
+                <div class="skill html" style="width: 75%;">75%</div> 
+            </div> 
+
+            <p>PHP</p> 
+            <div class="container"> 
+                <div class="skill php" style="width: 80%;">80%</div> 
+            </div>
+
+            <p>Java</p> 
+            <div class="container"> 
+                <div class="skill java" style="width: 60%;">60%</div> 
+            </div>
+
+            <p>CSS</p> 
+            <div class="container"> 
+                <div class="skill css" style="width: 30%;">30%</div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Nyoman Maheka Wijananta Putra</p>
+        <p>Email: nyomanmaheka69@gmail.com</p>
+        <p>Company: Example Company</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            
+            document.querySelectorAll('.profile-info, .profile-links, .profile-projects, #skills').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+            }
+
+            
+            const profileContainer = document.getElementById('profileContainer');
+            profileContainer.style.opacity = 0;
+            setTimeout(() => {
+                profileContainer.style.opacity = 1;
+            }, 0);
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            document.querySelectorAll('.profile-info, .profile-links, .profile-projects, #skills').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            
+            document.getElementById('profileHeader').classList.add('active');
+            document.getElementById('profileContainer').style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

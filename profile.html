@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    <link rel="stylesheet" href="your-stylesheet.css">
+    <style>
+        body {
+    background: #F5F7F8;
+}
+
+.card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F4CE14;
+    transform: scaleY(1);
+    transition: all 0.5s;
+    transform-origin: bottom;
+}
+
+.card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #495E57;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: bottom;
+}
+
+.card:hover::after {
+    transform: scaleY(1);
+}
+
+.fonts {
+    font-size: 11px;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-list li {
+    padding: 10px;
+    color: #495E57;
+    font-size: 19px;
+}
+
+.buttons button {
+    border: 1px solid #495E57 !important;
+    color: #495E57;
+    height: 40px;
+    margin-right: 5px; /* Adjust spacing between buttons */
+}
+
+.buttons button:hover {
+    background-color: #495E57;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+                <div class="card p-3 py-4">
+                    <div class="text-center">
+                        <img src="maheka.jpg" width="100" class="rounded-circle">
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="bg-secondary p-1 px-4 rounded text-white"></span>
+                        <h5 style="font-family: Arial, Helvetica, sans-serif;">Nyoman Maheka Wijananta Putra</h5>
+                        <h5 class="mt-2 mb-0">Siswa Smk Wira Harapan</h5>
+                        <div class="px-4 mt-1">
+                            <p class="fonts">Kunci Kemenangan adalah Diri Kita Sendiri </p>
+                        </div>
+                        <ul class="social-list">
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-dribbble"></i></li>
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-google"></i></li>
+                        </ul>
+                        <div class="buttons">
+                            <button class="btn btn-outline-primary px-4">Message</button>
+                            <button class="btn btn-primary px-4 ms-3">Contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
